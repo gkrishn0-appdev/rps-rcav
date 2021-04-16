@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
     else
       @outcome = "won"
     end 
-    render({ :template => "game_templates/user_rock.html.erb" })
+    render({ :template => "game_templates/user_rock.html.erb",:layout=>"wrapper.html.erb"  })
   end  
   def play_paper
     @comp_move = ["rock", "paper", "scissors"].sample
@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
     else
       @outcome = "won"
     end 
-    render({ :template => "game_templates/user_paper.html.erb" })
+    render({ :template => "game_templates/user_paper.html.erb", :layout=>"wrapper.html.erb" })
   end 
    def play_scissors
     @comp_move = ["rock", "paper", "scissors"].sample
@@ -37,10 +37,10 @@ class ApplicationController < ActionController::Base
     else
       @outcome = "won"
     end 
-    render({ :template => "game_templates/user_scissors.html.erb" })
+    render({ :template => "game_templates/user_scissors.html.erb",:layout=>"wrapper.html.erb"  })
   end 
   def homepage
-    render({ :template => "game_templates/rules.html.erb" })
+    render({ :template => "game_templates/rules.html.erb", :layout=>"wrapper.html.erb" })
   end 
 end
 
